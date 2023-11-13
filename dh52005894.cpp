@@ -15,6 +15,10 @@ bool isPerfectNumber(int number) {
     return (sum == number);
 }
 
+bool isPerfectSquare(int number) {
+    int sqrtNumber = sqrt(number);
+    return (sqrtNumber * sqrtNumber == number);
+}
 void main(){
     int n;
     cout << "Nhap vao mot so nguyen ";
@@ -25,4 +29,9 @@ void main(){
         cout << n << " không phải là số hoàn thiện." << :endl;
     }
 
+    if (isPerfectSquare(n)) {
+        cout << n << " là số chính phương." << std::endl;
+    } else {
+        cout << n << " không phải là số chính phương." << std::endl;
+    }
 }
